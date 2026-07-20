@@ -1,0 +1,150 @@
+/* إزالة المسافات الافتراضية للمتصفح */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+}
+
+
+/* التخطيط الشبكي للحاوية الكبيرة */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* العمود الأول 250 بكسل، العمود الثاني يأخذ باقي المساحة */
+    min-height: 100vh; /* جعل طول الموقع يأخذ كامل ارتفاع الشاشة */
+}
+
+
+/* تنسيق الشريط الجانبي */
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.sidebar ul {
+    list-style: none;
+}
+
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+
+/* تأثير المرور وتنسيق الصفحة النشطة */
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #34495e;
+    color: #3498db;
+    padding-right: 15px; /* إزاحة بسيطة لإعطاء حيوية */
+}
+
+
+/* تنسيق المحتوى الرئيسي */
+.main-content {
+    padding: 30px;
+}
+
+
+header {
+    margin-bottom: 30px;
+}
+
+
+/* تقسيم الكروت باستخدام Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.card h3 {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background: #2c3e50;
+    color: white;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    max-width: 500px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #2980b9;
+}
